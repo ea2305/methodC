@@ -30,7 +30,7 @@ void readInt(int *IResolve){
 	while(ok == 0){
 
 		ok = 1;
-		int i=0,y = 0;
+		int i = 0;
 		char buff,Array[TOP];
 
 		while((buff = getchar()) != '\n'){
@@ -65,7 +65,7 @@ void readFloat(float *Resolve){
 	while(ok == 0){//Prueba hasta introducir cadena correcta
 
 		ok = 1;//Inicializa validador TRUE
-		int i = 0,y = 0;
+		int i = 0;
 		char buff,Array[TOP];
 
 		while((buff = getchar()) != '\n'){//Validacion caracter por caracter
