@@ -1,0 +1,28 @@
+//Metodo de lectura
+//Libreria de lectura de datos por teclado en C
+
+Agregar al proyecto:
+1.-Descarga los archivos
+2.-Coloca la libreria en la raiz del proyecto (o en el directorio de el main)
+3.-importa la libreria
+	#inlcude "read.h"
+4.-Verificar y utilizar en proyectos.
+
+#################################################################################################################
+
+Funciones:
+
+readInt : recive la posición de memoria como parámetro, asigna a la posición de memoria el valor, validado
+
+	Ejemplo:
+
+	int A = 0;
+
+	readInt(&A);//Envio de posición de memoria por puntero
+
+readFloat : recive la posición de memoria como parámetro, asigna a la posición de memoria el valor, validado
+	Ejemplo:
+	
+	float B = 0.0;
+	
+	readFloat(&B);//Envio de posición de memoria por puntero
