@@ -65,7 +65,7 @@ void readFloat(float *Resolve){
 	while(ok == 0){//Prueba hasta introducir cadena correcta
 
 		ok = 1;//Inicializa validador TRUE
-		int i = 0;
+		int i = 0, y = 0;
 		char buff,Array[TOP];
 
 		while((buff = getchar()) != '\n'){//Validacion caracter por caracter
@@ -92,17 +92,4 @@ void readFloat(float *Resolve){
 		if(ok == 1) *Resolve= atof(Array);//Convierte y asigna cadena a flotante en caso de ser valida
 		fflush(stdin);
 	}
-}
-
-int main(){
-	float A;
-	int B;
-	printf("lectura 1:\n");
-	readInt(&B);//Lectura en B
-
-	printf("lectura 2:\n");
-	readFloat(&A);//lectrua en A
-	printf("flotante : %f\n",A );
-	printf("entero : %d\n",B );
-
 }
