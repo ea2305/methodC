@@ -8,10 +8,6 @@
 #include <string.h>
 #define TOP 1000000
 
-int write(){
-		printf("En proceso>>\n");
-}
-
 int TypeCorrect(char ok){
 	int Check[10] = {0,1,2,3,4,5,6,7,8,9};
 	int i,Go = 0;
@@ -34,26 +30,26 @@ void readInt(int *IResolve){
 		char buff,Array[TOP];
 
 		while((buff = getchar()) != '\n'){
-			if(buff == '-' || buff == '+' && i==0){
-				Array[i] = buff;
-				i++;
-			}
+
+			if(buff == '-' || buff == '+' && i==0)
+				Array[i++] = buff;
+
 			else{
-				if(TypeCorrect(buff)){
-					Array[i] = buff;
-					i++;
-				}
+
+				if(TypeCorrect(buff))
+					Array[i++] = buff;
+
 				else{
 					puts("Caracter invalido, introduzca numeros");
 					ok = 0;
+					while (buff = getchar() != '\n') {}
 					break;
 				}
 			}
 		}
-
-		if(ok == 1)	*IResolve= atoi(Array);//Convierte y asigna cadena a entera en caso de ser valida
+		if(ok == 1)	*IResolve= atof(Array);//Convierte y asigna cadena a entera en caso de ser valida
+											//conversion a flotante asignacion en entero.
 		fflush(stdin);
-
 	}
 }
 
@@ -84,6 +80,7 @@ void readFloat(float *Resolve){
 					else{
 						puts("Caracter invalido, introduzca numeros");
 						ok = 0;
+						while (buff = getchar() != '\n') {}
 						break;
 					}
 				}
